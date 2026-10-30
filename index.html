@@ -88,6 +88,9 @@
   .result-title{ font-family:"Shippori Mincho",serif; font-size:20px; color:var(--indigo); margin:0 0 18px 0; line-height:1.6; }
   .result-text{ font-size:14px; line-height:1.95; white-space:pre-line; margin-bottom:24px; }
   .result-action{ background:var(--bg); border:1px solid var(--line); border-radius:4px; padding:14px 16px; font-size:12.5px; color:var(--indigo); margin-bottom:24px; }
+  .result-action strong{ display:block; margin-bottom:8px; letter-spacing:1px; }
+  .rx-list{ margin:0; padding-left:18px; text-align:left; line-height:1.8; }
+  .dm-line{ font-size:12px; color:var(--text); opacity:0.7; margin:-8px 0 24px; line-height:1.7; }
   .restart-btn{ background:none; border:1px solid var(--gold); color:var(--indigo); padding:12px 20px; border-radius:2px; font-size:13px; cursor:pointer; font-family:"Noto Sans JP",sans-serif; }
   .restart-btn:hover{ background:var(--gold); color:var(--white); }
 
@@ -273,6 +276,171 @@ const I18N = {
   }
 };
 const LANG_NAMES = { jp:"日本語", en:"English", kr:"한국어" };
+const RESULT_V2 = {
+ "kr": {
+  "rxTitle": "오늘 밤의 처방전",
+  "dm": "당신에게 맞는 처방전을 더 받고 싶으면 DM으로 \"처방전\"이라고 보내주세요",
+  "tiers": [
+   {
+    "title": "지금 당신은, 잘 정돈되어 있어요",
+    "text": "특별한 처방전은 필요 없어요. 오늘의 당신은 이미 충분히 애쓰고 있어요. 그러니 좋아하는 향기로 자신에게 작은 사치를 선물해 보세요."
+   },
+   {
+    "title": "조금만 더 채우면 돼요",
+    "text": "6가지 중 빛나고 있는 부분이 참 많네요. 오늘은 살짝 그늘진 곳에 조용히 손을 얹어 보세요. 정돈은 '더하는 것'보다 '알아차리는 것'에서 시작돼요."
+   },
+   {
+    "title": "애쓰는 당신에게, 숨 돌릴 시간",
+    "text": "가족을 위해 애쓰는 당신. 하지만 오늘의 점수는 당신 자신이 조금 뒤로 밀려나 있음을 알려주고 있어요. 오늘 밤은 '나를 위한' 시간을 아주 조금만 되찾아 보세요."
+   },
+   {
+    "title": "전문가에게 상담하는 것도, 훌륭한 셀프케어예요",
+    "text": "혼자 끌어안지 않아도 돼요. 필요할 때 기댈 곳이 있다는 건, 당신이 이미 가진 강점이에요. 무리하지 말고, 믿을 수 있는 전문가에게 살짝 손을 내밀어 보세요."
+   }
+  ],
+  "rx": [
+   [
+    "오늘 밤은 따뜻한 된장국 한 그릇. 건더기는 있는 것으로 충분해요",
+    "첫 한 입 전에는, 먼저 향기를 맡아 보세요",
+    "마음속으로 \"배야, 고마워\"라고 속삭여 보세요"
+   ],
+   [
+    "어깨를 천천히 10번 돌리세요",
+    "제자리에서 30초, 가볍게 발구르기",
+    "창문을 열고 심호흡 3번"
+   ],
+   [
+    "좋아하는 향을 손바닥에 한 방울",
+    "눈을 감고, 향기만을 10초간 따라가 보세요",
+    "내쉬는 숨을 들이마시는 숨보다 조금 길게"
+   ],
+   [
+    "오늘 가장 답답했던 것을, 종이에 한 줄만 쓰세요",
+    "쓰고 나면 그 종이를 꾹 구기세요",
+    "\"오늘은 여기까지\"라고 말해 보세요"
+   ],
+   [
+    "신경 쓰이는 곳에 손을 얹고 30초",
+    "\"여기, 애쓰고 있구나\"라고 말을 걸어 보세요",
+    "내일 아침 가장 먼저 하고 싶은 정돈 하나만 정하세요"
+   ],
+   [
+    "기댈 수 있는 사람·장소를 하나, 메모에 쓰세요",
+    "\"도와줘\"라고 말하는 연습을 마음속으로 한 번만",
+    "내일 그 사람에게 연락할 시간을 정하세요"
+   ]
+  ]
+ },
+ "jp": {
+  "rxTitle": "今夜の処方箋",
+  "dm": "もっとあなたに合った処方箋がほしい方は、DMで「処方箋」と送ってくださいね",
+  "tiers": [
+   {
+    "title": "今のあなたは、よく整っています",
+    "text": "特別な処方箋はいりません。今日のあなたは、もう十分にがんばっています。せっかくなら、好きな香りで自分にちょっとした贅沢を。"
+   },
+   {
+    "title": "あと少しで、満ちる",
+    "text": "6つのうち、光っているところがたくさんありますね。少し影になっているところに、今日はそっと手を当ててみましょう。整えるのは、足すことよりも「気づくこと」から始まります。"
+   },
+   {
+    "title": "がんばり屋さんの、ひと息タイム",
+    "text": "家族のためにがんばるあなた。でも今日のスコアは、あなた自身が少し後回しになっていることを教えてくれています。今夜は「自分のため」の時間を、ほんの少しだけ取り戻しましょう。"
+   },
+   {
+    "title": "専門家に相談することも、立派なセルフケアです",
+    "text": "自分だけで抱え込まなくて大丈夫。必要な時に頼れる場所があることは、あなたがすでに持っている強さです。無理をせず、頼れる専門家にそっと手を伸ばしてみてください。"
+   }
+  ],
+  "rx": [
+   [
+    "今夜は温かいお味噌汁を一杯。具はあるもので大丈夫",
+    "一口目は、まず香りをかいでから",
+    "「お腹、ありがとう」と心の中でつぶやく"
+   ],
+   [
+    "肩をゆっくり10回まわす",
+    "その場で30秒、軽く足踏み",
+    "窓を開けて、深呼吸を3回"
+   ],
+   [
+    "好きな香りを手のひらに1滴",
+    "目を閉じて、香りだけを10秒追う",
+    "吐く息を、吸う息より少し長く"
+   ],
+   [
+    "今日いちばんモヤッとしたことを、紙に一行だけ書く",
+    "書いたら、その紙をくしゃっと丸める",
+    "「今日はここまで」と声に出してみる"
+   ],
+   [
+    "気になるところに手を当てて、30秒",
+    "「ここ、がんばってるね」と声をかける",
+    "明日の朝いちばんにしたい整えを、ひとつだけ決める"
+   ],
+   [
+    "頼れる人・場所をひとつ、メモに書く",
+    "「助けて」と言う練習を、心の中で一回だけ",
+    "明日、その人に連絡する時間を決める"
+   ]
+  ]
+ },
+ "en": {
+  "rxTitle": "Tonight's prescription",
+  "dm": "Want a prescription made just for you? DM us \"prescription\"",
+  "tiers": [
+   {
+    "title": "You are well-tuned today",
+    "text": "No special prescription needed. You've already done more than enough today. Treat yourself to a small luxury — your favorite scent."
+   },
+   {
+    "title": "Almost full — just a little more",
+    "text": "So many of the six areas are shining. Today, gently place your hand on the one that's a little dimmer. Tuning up starts not with adding more, but with noticing."
+   },
+   {
+    "title": "A breather for the one who tries so hard",
+    "text": "You work so hard for your family. But today's score is telling you something — you've been putting yourself last. Tonight, take back just a little time for yourself."
+   },
+   {
+    "title": "Asking an expert is also self-care",
+    "text": "You don't have to carry it all alone. Knowing where to turn when you need help is already a strength you have. Without pushing yourself, reach out gently to someone you trust."
+   }
+  ],
+  "rx": [
+   [
+    "Tonight, one bowl of warm miso soup — whatever ingredients you have is fine",
+    "Before the first sip, pause and smell it",
+    "Whisper in your heart: \"Thank you, belly\""
+   ],
+   [
+    "Roll your shoulders slowly, 10 times",
+    "March in place lightly for 30 seconds",
+    "Open a window and take 3 deep breaths"
+   ],
+   [
+    "One drop of your favorite scent on your palm",
+    "Close your eyes and follow only the scent for 10 seconds",
+    "Make your exhale a little longer than your inhale"
+   ],
+   [
+    "Write today's heaviest feeling in one line on paper",
+    "Then crumple the paper up",
+    "Say out loud: \"That's enough for today\""
+   ],
+   [
+    "Place your hand where it bothers you, for 30 seconds",
+    "Tell it: \"You're working hard, aren't you\"",
+    "Decide just one tuning ritual for tomorrow morning"
+   ],
+   [
+    "Write down one person or place you can rely on",
+    "Practice saying \"help me\" once, in your heart",
+    "Decide a time tomorrow to contact them"
+   ]
+  ]
+ }
+};
+
 const QUESTION_KEYS = ["food","move","rest","detox","selfcare","medical"];
 
 let lang = "jp";
@@ -347,24 +515,34 @@ function nextStep(){
   }
 }
 
-function pickKey(){
-  if(scores.medical <= 2) return "medical";
-  if(scores.rest <= 2) return "rest";
-  if(scores.move <= 2) return "move";
-  if(scores.food <= 2 && scores.detox <= 2) return "foodDetox";
-  if(scores.food <= 2) return "food";
-  if(Object.values(scores).every(v => v >= 3)) return "allHigh";
-  return "default";
+function tierIndex(){
+  const n = totalScore();
+  if(n >= 26) return 0;
+  if(n >= 20) return 1;
+  if(n >= 14) return 2;
+  return 3;
+}
+
+function lowestIndex(){
+  let idx = 0, min = Infinity;
+  QUESTION_KEYS.forEach((k,i)=>{ const v = scores[k] || 0; if(v < min){ min = v; idx = i; } });
+  return idx;
+}
+
+function buildResult(){
+  const r = RESULT_V2[lang];
+  const ti = tierIndex();
+  return { tier: r.tiers[ti], rxTitle: r.rxTitle, rx: r.rx[lowestIndex()], dm: ti >= 1 ? r.dm : null };
 }
 
 function showResult(){
-  const p = I18N[lang].presc[pickKey()];
+  const res = buildResult();
   card.innerHTML = `
     <div class="result">
-      <div class="result-eyebrow">${p.eyebrow}</div>
-      <h2 class="result-title">${p.title.replace(/\n/g,"<br>")}</h2>
-      <div class="result-text">${p.text}</div>
-      ${p.action ? `<div class="result-action">${p.action}</div>` : ""}
+      <h2 class="result-title">${res.tier.title}</h2>
+      <div class="result-text">${res.tier.text}</div>
+      <div class="result-action"><strong>${res.rxTitle}</strong><ul class="rx-list">${res.rx.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+      ${res.dm ? `<div class="dm-line">${res.dm}</div>` : ""}
       <div class="score-section">
         <div class="score-total">
           <div class="num">${totalScore()}<span> / 30</span></div>
@@ -408,11 +586,9 @@ function renderScoreRows(){
 
 function buildShareText(){
   const t = I18N[lang];
-  const p = t.presc[pickKey()];
-  const plainTitle = p.title.replace(/\n/g," ");
-  const plainText = p.text.replace(/\n/g," ");
-  let msg = `🌿 ${t.shareIntro}\n\n${plainTitle}\n\n${plainText}`;
-  if(p.action) msg += `\n\n${p.action}`;
+  const res = buildResult();
+  let msg = `🌿 ${t.shareIntro}\n\n${res.tier.title}\n\n${res.tier.text}`;
+  msg += `\n\n${res.rxTitle}\n` + res.rx.map(x=>"・"+x).join("\n");
   msg += `\n\n${t.totalLabel}: ${totalScore()} / 30`;
   msg += `\n\n${t.scoreHeading}:\n`;
   msg += QUESTION_KEYS.map((key, i) => `${t.questions[i].cat} ${scores[key] || 0}/5`).join("\n");
